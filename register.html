@@ -2,9 +2,15 @@
 <html>
 <head>
     <link rel= "stylesheet" type="text/css" href="mystyle.css">
+    <script src="myscript.js"></script>
+    <style>
+        P{
+            color:blue;
+        }
+    </style>
 </head>
 <body >
-       
+
 
 <table border='0' width='480px' cellpadding='0' cellspacing='0' align='center' >
    <td align='center'><h1 style  = "color:hsl(351, 16%, 34%); 
@@ -12,104 +18,112 @@
     font-style:italic; 
     text-align:center;">REGISTER</h1></td><br></tr>
    <tr>
-   <td><h2 style  = "color:#140b0c; 
-    font-style:italic; 
-    text-align:center;"> Please fill in this form to create an account</h2></td></tr>
-  
-
-
-
+   <td><h2 style  = "color:#140b0c; font-style:italic; text-align:center;"> Please fill in this form to create an account</h2></td></tr>
 <table border='0' width='480px' cellpadding='0' cellspacing='0' align='center' style  = "color:#140b0c; 
 font-style:italic; " >
+
 <tr>
-    <form action = "login.html">
+    <form action = "login.html" name="f1" onsubmit="Validate() ,validateemail() ,val(),val1(),val2(), dval()">
     <td align='center'>UserName:</td>
-    <td><input type="text" placeholder="Enter Username" name="uname" required></td>
+    <td><input type="text" placeholder="Enter Username" name="uname"  
+        required onkeyup="val2()"></td><td><p id="u"></p></td>
 </tr>
+
 <tr> <td>&nbsp;</td> </tr>
 <tr>
     <td align='center'>Name:</td>
     <td><input type="text" placeholder="Enter name" name="name" required></td>
 </tr>
+
 <tr> <td>&nbsp;</td> </tr>
 <tr>
     <td align='center'>Email:</td>
-    <td><input type="text" placeholder="Enter Email" pattern=".+@gmail.com" name="ename" required></td>
+    <td><input type="text" placeholder="Enter Email"  name="ename" 
+    required onkeyup="validateemail()"></td><td><p id="k"></p></td>
 </tr>
+
 <tr> <td>&nbsp;</td> </tr>
 <tr>
     <td align='center'>Password:</td>
-    <td><input type="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="psw" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td>
+    <td><input type="password" placeholder="Enter Password"  name="password1"
+         required onkeyup="val()"></td><td><p id="p"></p></td>
 </tr>
+
 <tr> <td>&nbsp;</td> </tr>
 <tr>
     <td align='center'>Re Password:</td>
-    <td><input type="password" placeholder="Repeat Password" name="rpsw" required></td>
+    <td><input type="password" placeholder="Repeat Password" name="password2" 
+        required onkeyup="Validate()"></td><td><p id="ki"></p></td>
 </tr>
-
 
 <tr> <td>&nbsp;</td> </tr>
 <tr>
     <td align='center'>DOB:</td>
-    <td><input type="dob" placeholder="mm/dd/yyyy" name="pno" required></td>
+    <td><input type="dob" placeholder="mm/dd/yyyy" id="dof" 
+        required onkeyup="dval()"></td><td><p id="ui"></p></td>
 </tr>
+
 <tr> <td>&nbsp;</td> </tr>
-       <td align='center'>Gender:</td>
-        <td> <input type="radio" name="gender" value="male" checked> Male<br>
-            <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="other"> Other</td>
-           
-            <tr> <td>&nbsp;</td> </tr>
-       <td align='center'>Language Known:</td>
-       <td><input type="checkbox" name="English" value="English"checked> English <br>
+            <td align='center'>Gender:</td>
+            <td> <input type="radio" name="gender" value="male" checked> Male<br>
+                 <input type="radio" name="gender" value="female"> Female<br>
+                 <input type="radio" name="gender" value="other"> Other</td>
+                
+<tr> <td>&nbsp;</td> </tr>
+     <td align='center'>Language Known:</td>
+     <td><input type="checkbox" name="English" value="English"checked> English <br>
         <input type="checkbox" name="Hindi" value="Hindi">Hindi<br>
         <input type="checkbox" name="Tamil" value="Tamil" >Tamil<br>
         <input type="checkbox" name="Telagu" value="Telagu" >Telagu<br></td>
-        <tr> <td>&nbsp;</td> </tr>
-        <tr>
+
+<tr> <td>&nbsp;</td> </tr>
+    <tr>
             <td align='center'>Contact Number:</td>
-            <td><input type="phone number" placeholder="Phone number" name="pno"  pattern="[7-9][0-9]{9}" required></td>
-        </tr>
-        <tr> <td>&nbsp;</td> </tr>
-        <td align='center'>Favourite color:</td>
+            <td><input type="phone number" placeholder="Phone number" name="pnoo"   
+                required onkeyup="val1()"></td><td><p id="ph"></p></td>
+    </tr>
+
+<tr> <td>&nbsp;</td> </tr>
+     <td align='center'>Favourite color:</td>
             <td>
                 <input type="color" name="color" value="color" id="colorupload">
             </td>
-        </tr>
-        <tr> <td>&nbsp;</td> </tr>
+</tr>
+
+<tr> <td>&nbsp;</td> </tr>
         <td align='center'>Upload:</td>
-        <td><input type="file" name="pic" accept="image/*"></td>
+        <td><input type="file" name="pic" accept="image/*">
+</td>
 
-        <tr> <td>&nbsp;</td> </tr>
+<tr> <td>&nbsp;</td> </tr>
         <td align='center'>Download File:</td>
-        <td><button class="btn"><i class="fa fa-download"></i> Download PDF File </button></td>
+        <td><button class="btn"><i class="fa fa-download"></i> Download PDF File </button>
+</td>
 
-        <tr> <td>&nbsp;</td> </tr>
+<tr> <td>&nbsp;</td> </tr>
         <td align='center'>Qualification:</td>
         <td><select name="Degre">
                 <option value="Degree">Degree</option>
                 <option value="Btech">Btech</option>
                 <option value="Bsc">Bsc</option>
                 <option value="Bca">Bca</option>
-              </select></td>
+</select></td>
         
 <tr> <td>&nbsp;</td> </tr>
 <table border='0' cellpadding='0' cellspacing='0' width='480px' align='center' >
 <tr>
 <tr><td align='center'>
-      <input type= "submit">
+      <input type= "submit" onclick="return Validate(),validateemail(),val(),val1(),val2(), dval()">
     </button> </td>
       
+<td><button type="reset" value="Reset">Reset</button></td>
   
-    <td><button type="reset" value="Reset">Reset</button></td>
-  
- 
-    <td><button class="btn"><i class="fa fa-download"></i> Download </button></td>
+ <td><button class="btn"><i class="fa fa-download"></i> Download </button></td>
+
 </form>
 </tr>
 </table>
 </table>
-
 </table>
 </body>
 </html>
