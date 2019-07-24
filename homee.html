@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html><head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel= "stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="myscript.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .form-rounded{
+        border-radius: 50px;
+    }
+</style>
+</head>
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#Logo" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+  <a href="#registration" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Registration</a>
+  <a href="#Login" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
+ 
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+        <a href="#Logo" class="w3-bar-item w3-button">Logo</a>
+    <a href="#Login" class="w3-bar-item w3-button">Login</a>
+    <a href="#registration" class="w3-bar-item w3-button">Registration</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+ <img src="vkv.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+          
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+       
+        
+    <header class="w3-container w3-teal w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+
+<!-- Registration Container -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l5" id="registration"></div>
+<table border='0' width='480px' cellpadding='0' cellspacing='0' align='center' >
+    
+        <td align='center' class='w3-bar-item w3-button w3-hide-small w3-hover-white'><h1 style  = "color:hsl(351, 16%, 34%); 
+         font-size:50px; 
+         font-style:italic; 
+         text-align:center;">REGISTER</h1></td><br></tr>
+        <tr>
+        <td><h2 style  = "color:#140b0c; font-size:20px;  font-style:italic; text-align:center;"> Please fill in this form to create an account</h2></td></tr>
+     <table border='0' width='480px' cellpadding='1' cellspacing='0' align='center' style  = "color:#140b0c; 
+     font-style:italic; " >
+     
+     <tr>
+         <form action = #Login name="f1" onsubmit="Validate() ,validateemail() ,val(),val1(),val2(), dval() ">
+         <td align='center' >UserName:</td>
+         <td><input type="text" placeholder="Enter Username" name="uname"  class="form-control form-rounded"
+             required onkeyup="val2()" size="5"></td><td><p id="u"></p></td>
+     </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         <td align='center'>Name:</td>
+         <td><input type="text" placeholder="Enter name" name="name" class="form-control form-rounded" required></td>
+     </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         <td align='center'>Email:</td>
+         <td><input type="text" placeholder="Enter Email"  name="ename" class="form-control form-rounded"
+         required onkeyup="validateemail()"></td><td><p id="k"></p></td>
+     </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         <td align='center'>Password:</td>
+         <td><input type="password" placeholder="Enter Password"  name="password1" class="form-control form-rounded"
+              required onkeyup="val()"></td><td><p id="p"></p></td>
+     </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         <td align='center'>Re Password:</td>
+         <td><input type="password" placeholder="Repeat Password" name="password2" class="form-control form-rounded"
+             required onkeyup="Validate()"></td><td><p id="ki"></p></td>
+     </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+     <tr>
+         <td align='center'>DOB:</td>
+         <td><input type="dob" placeholder="mm/dd/yyyy" id="dof" class="form-control form-rounded"
+             required onkeyup="dval()"></td><td><p id="ui"></p></td>
+     </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+                 <td align='center' >Gender:</td>
+                 <td> <input type="radio" name="gender" value="male" checked> Male<br>
+                      <input type="radio" name="gender" value="female"> Female<br>
+                      <input type="radio" name="gender" value="other"> Other</td>
+                     
+     <tr> <td>&nbsp;</td> </tr>
+          <td align='center'>Language Known:</td>
+          <td><input type="checkbox" name="English" value="English"checked> English <br>
+             <input type="checkbox" name="Hindi" value="Hindi">Hindi<br>
+             <input type="checkbox" name="Tamil" value="Tamil" >Tamil<br>
+             <input type="checkbox" name="Telagu" value="Telagu" >Telagu<br></td>
+     
+     <tr> <td>&nbsp;</td> </tr>
+         <tr>
+                 <td align='center'>Contact Number:</td>
+                 <td><input type="phone number" placeholder="Phone number" name="pnoo"   class="form-control form-rounded"
+                     required onkeyup="val1()"></td><td><p id="ph"></p></td>
+         </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+          <td align='center'>Favourite color:</td>
+                 <td>
+                     <input type="color" name="color" value="color" id="colorupload" class="form-control form-rounded">
+                 </td>
+     </tr>
+     
+     <tr> <td>&nbsp;</td> </tr>
+             <td align='center'>Upload:</td>
+             <td><input type="file" name="pic" accept="image/*">
+     </td>
+     
+     <tr> <td>&nbsp;</td> </tr>
+             <td align='center'>Download File:</td>
+             <td><button class="btn"><i class="fa fa-download"></i> Download PDF File </button>
+     </td>
+     
+     <tr> <td>&nbsp;</td> </tr>
+             <td align='center'>Qualification:</td>
+             <td><select name="Degre">
+                     <option value="Degree">Degree</option>
+                     <option value="Btech">Btech</option>
+                     <option value="Bsc">Bsc</option>
+                     <option value="Bca">Bca</option>
+     </select></td>
+             
+     <tr> <td>&nbsp;</td> </tr>
+     <table border='0' cellpadding='0' cellspacing='0' width='480px' align='center' >
+     <tr>
+     <tr><td align='center'>
+           <input type= "submit" onclick="return Validate(),validateemail(),val(),val1(),val2(), dval()">
+         </button> </td>
+           
+     <td><button type="reset" value="Reset">Reset</button></td>
+       
+      <td><button class="btn"><i class="fa fa-download"></i> Download </button></td>
+     
+     </form>
+     </tr>
+     </table>
+     </table>
+     </table>
+
+<!-- Login Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l5" id="Login"></div>
+
+<div class="imgcontainer" align="center">
+      <form action = #Logo>
+        <img src="avtar2.jpg" alt="image not found " width="120" height ="120" ></a></p>
+      </div>
+    
+      <div class="container" align="center">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required><br>
+    <br>
+        <label for="psw"><b>Password </b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required><br>
+    <br>
+        <button type="submit">Login</button>
+        <label>
+           
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div><br>
+   
+    
+      <div class="container" align="center" >
+          
+        <button type="button" class="cancelbtn">Cancel</button>
+        <br>
+        <br>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+<!-- Container -->
+
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-1"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chennai, India</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  9878666341</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  tiwari12@gmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
